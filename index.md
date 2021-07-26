@@ -2,7 +2,22 @@
 layout: lesson
 root: .  # Is the only page that doesn't follow the pattern /:path/index.html
 permalink: index.html  # Is the only page that doesn't follow the pattern /:path/index.html
+venue: Online
+address: 
+country: "UK"
+language: "English"
+latlng: 
+humandate: 10:00-16:00 BST, 28 - 29 July 2021
+humantime: 10:00-16:00 BST
+startdate: 2021-07-28
+enddate: 2021-07-29
+instructor: ["Andy Turner", "Jeremy Cohen"]
+helper: []
+email: ["support@archer2.ac.uk"]
+collaborative_notes: https://pad.archer2.ac.uk/p/210728-Containers
 ---
+
+This is the material for day 2 of the workshop. The material for day 1 can be found at: [Introduction to Docker](https://epcced.github.io/2021-07-28_Containers_Online/).
 
 This lesson provides an introduction to using the [Singularity container platform](https://github.com/hpcng/singularity). Singularity is particularly suited to running containers on infrastructure where users don't have administrative privileges, for example shared infrastructure such as High Performance Computing (HPC) clusters. 
 
@@ -29,7 +44,6 @@ This lesson will introduce Singularity from scratch showing you how to run a sim
 >
 > - Access to a local or remote Linux-based system on which you have administrator (root) access and can install the Singularity software.
 >
-> **Please note that the version of Singularity used in this part of the course is _version 3.5.3_ which was the latest stable release at the time of writing.** If you are installing Singularity on your own system for use in the course, you are recommneded to install version 3.5.3.
 {: .prereq}
 
 {% include links.md %}
