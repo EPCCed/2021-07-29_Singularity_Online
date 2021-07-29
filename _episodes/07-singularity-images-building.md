@@ -155,6 +155,8 @@ You should now have a `my_test_image.sif` file in the current directory. Note th
 >
 > However, the image file will be readable by you and you should be able to take a copy of the file under a new name which you will then own. You will then be able to modify the permissions of this copy of the image and delete the original root-owned file since the default permissions should allow this.
 > 
+> This may be an issue on Linux but is unlikely to be a problem on macOS/Windows where Docker Desktop manages the mapping of users between Docker containers and the host system. If you're running on Linux and experience this issue, you should look at using the `-u` switch to Docker to map your user on the host system to the same user within the container, e.g. add `-u $(id -u):$(id -g)` to the `docker run` command to map your current unix user ID and group ID into the container.
+> 
 {: .callout}
 
 It is recommended that you move the created `.sif` file to a platform with an installation of Singularity, rather than attempting to run the image using the Docker container. However, if you do wish to try using the Docker container, see the notes below on "_Using singularity run from within the Docker container_" for further information.
