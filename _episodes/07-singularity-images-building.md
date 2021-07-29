@@ -54,10 +54,10 @@ Bootstrap: docker
 From: ubuntu:20.04
 
 %post
-    apt-get -y update && apt-get install -y python
+    apt-get -y update && apt-get install -y python3
 
 %runscript
-    python -c 'print("Hello World! Hello from our custom Singularity image!")'
+    python3 -c 'print("Hello World! Hello from our custom Singularity image!")'
 ~~~
 {: .language-bash}
 
