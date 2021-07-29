@@ -170,7 +170,7 @@ If you have access to a remote platform with Singularity installed on it, you sh
 > For example, if you want to copy the `my_image.sif` file from the current directory on your local system to your home directory (e.g. `/home/myuser/`) on a remote system (e.g. _hpc.myinstitution.ac.uk_) where an SSH private key is required for login, you would use a command similar to the following:
 >
 > ```
-> ssh -i /path/to/keyfile/id_mykey ./my_image.sif myuser@hpc.myinstitution.ac.uk:/home/myuser/
+> scp -i /path/to/keyfile/id_mykey ./my_image.sif myuser@hpc.myinstitution.ac.uk:/home/myuser/
 > ```
 > Note that if you leave off the `/home/myuser` and just end the command with the `:`, the file will, by default, be copied to your home directory.
 >
