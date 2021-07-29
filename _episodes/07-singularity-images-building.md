@@ -157,15 +157,22 @@ You should now have a `my_test_image.sif` file in the current directory. Note th
 > 
 {: .callout}
 
-> ## Cluster platform configuration for running Singularity containers
->
-> _**Note to instructors:** Add details into this box of any custom configuration that needs to be done on the cluster platform or other remote system that you're providing access to for the purpose of undertaking this course. If `singularity` does not require any custom configuration by the user on the host platform, you can remove this box._
-> 
-{: .callout}
-
 It is recommended that you move the created `.sif` file to a platform with an installation of Singularity, rather than attempting to run the image using the Docker container. However, if you do wish to try using the Docker container, see the notes below on "_Using singularity run from within the Docker container_" for further information.
 
 If you have access to a remote platform with Singularity installed on it, you should now move your created `.sif` image file to this platform. You could, for example, do this using the command line secure copy command `scp`.
+
+> ## Using `scp` (secure copy) to copy files between systems
+>
+> `scp` is a widely used tool that uses the SSH protocol to securely copy files between systems. As such, the syntax is similar to that of SSH.
+> 
+> For example, if you want to copy the `my_image.sif` file from the current directory on your local system to your home directory (e.g. `/home/myuser/`) on a remote system (e.g. _hpc.myinstitution.ac.uk_) where an SSH private key is required for login, you would use a command similar to the following:
+>
+> ```
+> ssh -i /path/to/keyfile/id_mykey ./my_image.sif myuser@hpc.myinstitution.ac.uk:/home/myuser/
+> ```
+> Note that if you leave off the `/home/myuser` and just end the command with the `:`, the file will, by default, be copied to your home directory.
+>
+{: .callout}
 
 We can now attempt to run a container from the image that we built:
 
